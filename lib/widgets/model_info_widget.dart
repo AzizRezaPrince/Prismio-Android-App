@@ -35,8 +35,8 @@ class ModelInfoWidget extends StatelessWidget {
                 Text(
                   'Type: ${_getFileType()}',
                   style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    color: Colors.grey[600],
-                  ),
+                        color: Colors.grey[600],
+                      ),
                 ),
               ],
             ],
@@ -55,7 +55,7 @@ class ModelInfoWidget extends StatelessWidget {
 
   String _getFileType() {
     if (selectedFilePath == null) return 'Asset';
-    
+
     final fileName = selectedFilePath!.toLowerCase();
     if (fileName.endsWith('.glb')) return 'GLB';
     if (fileName.endsWith('.gltf')) return 'GLTF';

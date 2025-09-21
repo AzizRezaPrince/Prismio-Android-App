@@ -29,14 +29,15 @@ class _HomePageState extends State<HomePage> {
 
     try {
       final filePath = await FilePickerService.pickGlbFile();
-      
+
       if (filePath != null) {
         setState(() {
           _selectedFilePath = filePath;
           _isLoadingFile = false;
         });
 
-        _showSuccessMessage('Loaded: ${FilePickerService.getFileName(filePath)}');
+        _showSuccessMessage(
+            'Loaded: ${FilePickerService.getFileName(filePath)}');
       } else {
         setState(() {
           _isLoadingFile = false;

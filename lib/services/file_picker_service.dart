@@ -40,7 +40,7 @@ class FilePickerService {
           throw FilePickerException('Selected file does not exist');
         }
       }
-      
+
       return null; // User cancelled
     } catch (e) {
       if (e is FilePickerException) {
@@ -65,9 +65,9 @@ class FilePickerService {
 /// Custom exception class for file picker errors
 class FilePickerException implements Exception {
   final String message;
-  
+
   const FilePickerException(this.message);
-  
+
   @override
   String toString() => message;
 }
